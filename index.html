@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de gorjetas</title>
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div id="title-content">
+      <h2 id="title">Calculadora de gorjetas</h2>
+    </div>
+      <form id="calc-form">
+        <div class="inputs">
+          <label for="total-spent" class="texts">Valor total gasto R$ </label>
+          <input type="number" min="1" max="1000" id="total-spent" class="texts" required>
+        </div>
+        <div class="inputs">
+          <label for="people" class="texts">Quantidade de pessoas</label> 
+          <input type="number" min="1" max="10" id="amount-people" class="texts" required>
+        </div>
+
+        <div class="inputs">
+          <label for="quality-of-service" class="texts">Classifique o serviço: </label>
+        <select name="quality-of-service" id="quality-of-service" class="texts" required>
+          <option disabled selected value="0"> escolha uma opção</option>
+          <option value="0.05">5% Mediano</option>
+          <option value="0.1">10% Bom</option>
+          <option value="0.15">15% Muito bom</option>
+          <option value="0.20">20% Excelente</option>
+        </select>
+        </div>
+
+        <button type="submit" id="calc-btn" class="texts">Calcular</button>
+        <p id="tip-to-pay" class="texts"></p>
+      </form>
+  </div>
+</body>
+</html>
